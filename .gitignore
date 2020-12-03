@@ -1,5 +1,6 @@
 .idea
-node_modules
 .env
 package-lock.json
 build
+node_module
+node_modules

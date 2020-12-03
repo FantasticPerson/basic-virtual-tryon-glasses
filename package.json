@@ -2,7 +2,7 @@
   "name": "basic-virtual-tryon-glasses",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alperenuzun.github.io/basic-virtual-tryon-glasses",
+  "homepage": "/",
   "dependencies": {
     "@tensorflow-models/facemesh": "0.0.1",
     "@tensorflow/tfjs-converter": "^1.7.2",
@@ -27,8 +27,9 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "set 'REACT_APP_SECRET_CODE=development' && react-scripts start",
+    "build": "set 'REACT_APP_SECRET_CODE=production' && react-scripts build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,7 +48,9 @@
     ]
   },
   "devDependencies": {
+    "customize-cra": "^1.0.0",
     "gh-pages": "^3.1.0",
+    "react-app-rewired": "^2.1.6",
     "travis-ci-cloudfront-invalidation": "^1.1.0"
   }
 }
